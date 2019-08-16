@@ -147,93 +147,93 @@ Humanoid.prototype.greet = function() {
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
 
 /*HERO*/
-  function Hero(attributes) {
-    Humanoid.call(this, attributes);
-    enemyHealthPoints = Villain.healthPoints;
-    };
+  // function Hero(attributes) {
+  //   Humanoid.call(this, attributes);
+  //   enemyHealthPoints = Villain.healthPoints;
+  //   };
 
-  Hero.prototype = Object.create(Humanoid.prototype);
+  // Hero.prototype = Object.create(Humanoid.prototype);
 
-  Hero.prototype.slash = function() {
-    enemy.healthPoints -= 10;
-    if (enemyHealthPoints <= 0){
-      return `Enemy slain!`
-    }
-    else if (enemyHealthPoints > 0){
-      return `${this.name} slashed for 10HP`;
-    }
-  }
-  Hero.prototype.stupify = function() {
-    enemy.healthPoints -=5;
-    if (enemyHealthPoints <= 0){
-      return `Enemy slain!`
-    }
-    else if (enemyHealthPoints > 0){
-      return `${this.name} stupified for 5HP`;
-    }
-  };
+  // Hero.prototype.slash = function() {
+  //   enemy.healthPoints -= 10;
+  //   if (enemyHealthPoints <= 0){
+  //     return `Enemy slain!`
+  //   }
+  //   else if (enemyHealthPoints > 0){
+  //     return `${this.name} slashed for 10HP`;
+  //   }
+  // }
+  // Hero.prototype.stupify = function() {
+  //   enemy.healthPoints -=5;
+  //   if (enemyHealthPoints <= 0){
+  //     return `Enemy slain!`
+  //   }
+  //   else if (enemyHealthPoints > 0){
+  //     return `${this.name} stupified for 5HP`;
+  //   }
+  // };
 
-  /*CREATE HERO*/
-  const student = new Hero({
-    createdAt: new Date(),
-    dimensions: {
-      length: 1,
-      width: 2,
-      height: 4,
-    },
-    healthPoints: 20,
-    name: 'Luna',
-    team: "Dumbledore's Army",
-    weapons: [
-      'Wand',
-      'Knowledge',
-    ],
-    language: 'English',
-  });
+//   /*CREATE HERO*/
+//   const DAMember = new Hero({
+//     createdAt: new Date(),
+//     dimensions: {
+//       length: 1,
+//       width: 2,
+//       height: 4,
+//     },
+//     healthPoints: 20,
+//     name: 'Luna',
+//     team: "Dumbledore's Army",
+//     weapons: [
+//       'Wand',
+//       'Knowledge',
+//     ],
+//     language: 'English',
+//   });
 
-/*VILLAIN*/
-  function Villain(attributes) {
-    Humanoid.call(this, attributes);
-    enemyHealthPoints = hero.healthPoints;
-    };
+// /*VILLAIN*/
+//   function Villain(attributes) {
+//     Humanoid.call(this, attributes);
+//     enemyHealthPoints = hero.healthPoints;
+//     };
 
-  Villain.prototype = Object.create(Humanoid.prototype);
+//   Villain.prototype = Object.create(Humanoid.prototype);
 
-  Villain.prototype.kick = function() {
-    enemy.healthPoints -= 10;
-    if (enemyHealthPoints <= 0){
-      return `Enemy slain!`
-    }
-    else if (enemy.healthPoints > 0){
-      return `${this.name} slashed for 10HP`;
-    }
-  }
-  Villain.prototype.punch = function() {
-    enemyHealthPoints -=5;
-    if (enemyHealthPoints <= 0){
-      return `Enemy slain!`
-    }
-    else if (enemy.healthPoints > 0){
-      return `${this.name} stupified for 5HP`;
-    }
-  };
-
-  const deathEater = new Villain({
-    createdAt: new Date(),
-    dimensions: {
-      length: 2,
-      width: 3,
-      height: 5,
-    },
-    healthPoints: 15,
-    name: 'Carrow',
-    team: 'Team Voldy',
-    weapons: [
-      'Wand',
-      'Fist',
-    ],
-    language: 'Mermish',
-  });
+//   Villain.prototype.kick = function() {
+//     enemy.healthPoints -= 10;
+//     if (enemyHealthPoints <= 0){
+//       return `Enemy slain!`
+//     }
+//     else if (enemy.healthPoints > 0){
+//       return `${this.name} slashed for 10HP`;
+//     }
+//   }
+//   Villain.prototype.punch = function() {
+//     enemyHealthPoints -=5;
+//     if (enemyHealthPoints <= 0){
+//       return `Enemy slain!`
+//     }
+//     else if (enemy.healthPoints > 0){
+//       return `${this.name} stupified for 5HP`;
+//     }
+//   };
+/*CREATE VILLAIN*/
+  // const deathEater = new Villain({
+  //   createdAt: new Date(),
+  //   dimensions: {
+  //     length: 2,
+  //     width: 3,
+  //     height: 5,
+  //   },
+  //   healthPoints: 15,
+  //   name: 'Carrow',
+  //   team: 'Team Voldy',
+  //   weapons: [
+  //     'Wand',
+  //     'Fist',
+  //   ],
+  //   language: 'Mermish',
+  // });
 
 
 
