@@ -145,3 +145,98 @@ Humanoid.prototype.greet = function() {
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
+
+/*HERO*/
+  function Hero(attributes) {
+    Humanoid.call(this, attributes);
+    enemyHealthPoints = Villain.healthPoints;
+    };
+
+  Hero.prototype = Object.create(Humanoid.prototype);
+
+  Hero.prototype.slash = function() {
+    enemy.healthPoints -= 10;
+    if (enemyHealthPoints <= 0){
+      return `Enemy slain!`
+    }
+    else if (enemyHealthPoints > 0){
+      return `${this.name} slashed for 10HP`;
+    }
+  }
+  Hero.prototype.stupify = function() {
+    enemy.healthPoints -=5;
+    if (enemyHealthPoints <= 0){
+      return `Enemy slain!`
+    }
+    else if (enemyHealthPoints > 0){
+      return `${this.name} stupified for 5HP`;
+    }
+  };
+
+  /*CREATE HERO*/
+  const student = new Hero({
+    createdAt: new Date(),
+    dimensions: {
+      length: 1,
+      width: 2,
+      height: 4,
+    },
+    healthPoints: 20,
+    name: 'Luna',
+    team: "Dumbledore's Army",
+    weapons: [
+      'Wand',
+      'Knowledge',
+    ],
+    language: 'English',
+  });
+
+/*VILLAIN*/
+  function Villain(attributes) {
+    Humanoid.call(this, attributes);
+    enemyHealthPoints = hero.healthPoints;
+    };
+
+  Villain.prototype = Object.create(Humanoid.prototype);
+
+  Villain.prototype.kick = function() {
+    enemy.healthPoints -= 10;
+    if (enemyHealthPoints <= 0){
+      return `Enemy slain!`
+    }
+    else if (enemy.healthPoints > 0){
+      return `${this.name} slashed for 10HP`;
+    }
+  }
+  Villain.prototype.punch = function() {
+    enemyHealthPoints -=5;
+    if (enemyHealthPoints <= 0){
+      return `Enemy slain!`
+    }
+    else if (enemy.healthPoints > 0){
+      return `${this.name} stupified for 5HP`;
+    }
+  };
+
+  const deathEater = new Villain({
+    createdAt: new Date(),
+    dimensions: {
+      length: 2,
+      width: 3,
+      height: 5,
+    },
+    healthPoints: 15,
+    name: 'Carrow',
+    team: 'Team Voldy',
+    weapons: [
+      'Wand',
+      'Fist',
+    ],
+    language: 'Mermish',
+  });
+
+
+
+
+  
+ 
