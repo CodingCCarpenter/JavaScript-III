@@ -1,9 +1,9 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. Window/Global Object Binding- the value of 'this' will be the object that contains the entire window/console.
-* 2. Implicit Binding- the value of this will be the object preceding a dot followed by a function (ex obj.function, obj would be 'this')
-* 3. New Binding- the value of this will be the object created by a constructor function
+* 1. Window/Global Object Binding- the value of 'this' will point to the entire window/console.
+* 2. Implicit Binding- the value of this will point to the object preceding a dot followed by a function (ex obj.function, obj would be 'this')
+* 3. New Binding- the value of this be what is bound and stored for later use
 * 4. Explicit Binding- what this refers to is explicityly stated.
 *
 * write out a code example of each explanation above
